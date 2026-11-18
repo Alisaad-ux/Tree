@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090b"><title>TREE | منصة تعليمية تجريبية</title>
+<style>
+:root{--bg:#08090b;--panel:#111317;--panel2:#171a20;--line:#292e37;--green:#39d98a;--gold:#e7c66a;--muted:#a4aab5;--red:#ef7777}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f3f5f7;font-family:Tahoma,Arial,sans-serif}
+header{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid var(--line);background:#0b0c0f;position:sticky;top:0;z-index:2}
+.brand{font-size:25px;font-weight:900;letter-spacing:2px;color:var(--gold)}.brand span{color:var(--green)}
+.headright{display:flex;align-items:center;gap:12px}.status{font-size:11px;color:var(--green);border:1px solid #245a42;padding:7px 10px;border-radius:30px}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);max-width:1200px;margin:auto;min-height:calc(100vh - 68px)}
+aside{border-left:1px solid var(--line);padding:18px 12px;background:#0b0c0f}
+.navbtn{display:block;width:100%;text-align:right;background:transparent;color:#c8cdd5;border:1px solid transparent;padding:13px;border-radius:10px;margin:4px 0;font:inherit;cursor:pointer}
+.navbtn.active,.navbtn:hover{background:#17221d;border-color:#28563f;color:var(--green)}
+main{padding:24px 20px 80px;min-width:0}.welcome{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+h1{font-size:24px;margin:0 0 7px}.muted{color:var(--muted);font-size:13px;line-height:1.7}
+.pill{background:#181b21;border:1px solid var(--line);border-radius:30px;padding:8px 12px;color:var(--muted);font-size:11px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
+.card{background:linear-gradient(145deg,#15181e,#101216);border:1px solid var(--line);border-radius:15px;padding:16px;min-width:0}
+.kicker{font-size:12px;color:var(--muted)}.big{font-size:27px;color:var(--gold);font-weight:bold;margin-top:9px}.green{color:var(--green)}
+.section{margin-top:24px}.section h2{font-size:18px;margin:0 0 12px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:right;padding:13px 9px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:normal}
+.coin{display:flex;align-items:center;gap:9px}.coinicon{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#252a33;color:var(--gold);font-weight:bold}
+button,.action{border:1px solid #326b4e;background:#173b29;color:#dfffea;padding:10px 13px;border-radius:9px;cursor:pointer;font:inherit;font-size:12px}
+button.primary{background:var(--green);color:#062014;border-color:var(--green);font-weight:bold}
+button:disabled{opacity:.5;cursor:default}
+.notice{border:1px solid #67552a;background:#211c10;color:#f0dfae;border-radius:12px;padding:12px;font-size:12px;line-height:1.8;margin:16px 0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.tabs button.active{border-color:var(--green);color:var(--green);background:#15261d}
+.panelhidden{display:none}
+label{display:block;color:var(--muted);font-size:12px;margin:10px 0 5px}input,select{width:100%;padding:11px;background:#090b0e;border:1px solid #363c47;color:white;border-radius:9px}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.metricrow{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}
+footer{text-align:center;color:#717985;font-size:11px;margin:32px 0}
+@media(max-width:760px){.layout{display:block}aside{display:flex;overflow:auto;gap:5px;padding:8px;border-left:0;border-bottom:1px solid var(--line)}.navbtn{white-space:nowrap;width:auto;margin:0;padding:10px}.grid{grid-template-columns:1fr 1fr}main{padding:18px 12px 70px}}
+@media(max-width:430px){.grid{grid-template-columns:1fr 1fr}.big{font-size:22px}table{font-size:11px}th,td{padding:10px 5px}.formgrid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><div class="brand">TREE<span>.</span></div><div class="headright"><span class="status">● وضع تجريبي تعليمي</span><span class="pill">عربي ▾</span></div></header>
+<div class="layout">
+<aside>
+<button class="navbtn active" data-page="home">◈ الرئيسية</button>
+<button class="navbtn" data-page="market">▤ سوق العملات</button>
+<button class="navbtn" data-page="trade">⇄ تداول تجريبي</button>
+<button class="navbtn" data-page="invest">⌁ الاستثمار طويل الأمد</button>
+<button class="navbtn" data-page="web3">◇ اللامركزية Web3</button>
+</aside>
+<main>
+<section id="home" class="page">
+<div class="welcome"><div><h1>مرحباً بك في TREE</h1><div class="muted">واجهة تعليمية لاستكشاف أسواق الأصول الرقمية وإدارة محفظة افتراضية.</div></div><span class="pill">لا توجد أموال حقيقية</span></div>
+<div class="grid">
+<div class="card"><div class="kicker">رصيد المحاكاة</div><div class="big" id="balance">$10,000.00</div><div class="muted">دولار افتراضي للتجربة</div></div>
+<div class="card"><div class="kicker">قيمة المحفظة الافتراضية</div><div class="big" id="portfolio">$0.00</div><div class="muted">تتغير وفق عمليات المحاكاة</div></div>
+<div class="card"><div class="kicker">الأصول في المحفظة</div><div class="big" id="assetsCount">0</div><div class="muted">أصول تجريبية</div></div>
+</div>
+<div class="notice">تنبيه مهم: الأسعار والأرصدة هنا أمثلة ثابتة وليست أسعار سوق مباشرة. لا يوجد تنفيذ تداول حقيقي أو إيداع أو سحب أو ربط بمحفظة. هذا النموذج للتعلّم فقط.</div>
+<div class="section"><h2>نظرة على السوق</h2><div class="card"><table><thead><tr><th>الأصل</th><th>السعر التوضيحي</th><th>التغير الافتراضي</th></tr></thead><tbody>
+<tr><td><span class="coin"><span class="coinicon">₿</span> Bitcoin</span></td><td>$60,000</td><td class="green">+1.2%</td></tr>
+<tr><td><span class="coin"><span class="coinicon">Ξ</span> Ethereum</span></td><td>$3,000</td><td class="green">+0.6%</td></tr>
+<tr><td><span class="coin"><span class="coinicon">◎</span> Solana</span></td><td>$140</td><td style="color:var(--red)">-0.4%</td></tr>
+</tbody></table></div></div>
+</section>
+<section id="market" class="page panelhidden">
+<h1>سوق العملات</h1><p class="muted">أسعار افتراضية لأغراض التعلم، وليست بيانات سوق حية.</p>
+<div class="card"><table><thead><tr><th>الأصل</th><th>السعر التوضيحي</th><th>ملاحظة</th></tr></thead><tbody>
+<tr><td>₿ Bitcoin (BTC)</td><td>$60,000</td><td>مثال تعليمي</td></tr><tr><td>Ξ Ethereum (ETH)</td><td>$3,000</td><td>مثال تعليمي</td></tr><tr><td>◎ Solana (SOL)</td><td>$140</td><td>مثال تعليمي</td></tr><tr><td>◇ USDC</td><td>$1</td><td>مثال تعليمي</td></tr>
+</tbody></table></div>
+</section>
+<section id="trade" class="page panelhidden">
+<h1>التداول التجريبي</h1><p class="muted">جرّب فهم أوامر الشراء والبيع باستخدام رصيد افتراضي فقط.</p>
+<div class="notice">هذه محاكاة مبسطة وليست توصية بشراء أو بيع أي عملة. لا تربط حساباً مالياً أو محفظة حقيقية.</div>
+<div class="card">
+<div class="formgrid"><div><label>الأصل</label><select id="asset"><option value="BTC">Bitcoin — سعر افتراضي $60,000</option><option value="ETH">Ethereum — سعر افتراضي $3,000</option><option value="SOL">Solana — سعر افتراضي $140</option></select></div>
+<div><label>نوع العملية</label><select id="side"><option value="buy">شراء افتراضي</option><option value="sell">بيع افتراضي</option></select></div></div>
+<label>المبلغ بالدولار الافتراضي</label><input id="amount" type="number" min="1" max="10000" placeholder="مثلاً 100">
+<p class="muted" id="preview">اختر أصلاً وأدخل مبلغاً لمعاينة العملية.</p>
+<button class="primary" onclick="simulate()">تنفيذ المحاكاة</button><p class="muted" id="tradeMsg" aria-live="polite"></p>
+</div><div class="section card"><h2>سجل المحاكاة</h2><div id="trades" class="muted">لا توجد عمليات حتى الآن.</div></div>
+</section>
+<section id="invest" class="page panelhidden">
+<h1>الاستثمار طويل الأمد — قائمة متابعة</h1><p class="muted">أنشئ قائمة تعليمية لمتابعة الأصول ومقارنة معلوماتها بمرور الوقت، دون توصيات أو شراء فعلي.</p>
+<div class="notice">الاستثمار في الأصول الرقمية قد ينطوي على تقلبات وخسارة كبيرة. هذه الصفحة لا تختار لك أصولاً ولا تقدم نصيحة مالية.</div>
+<div class="card"><h2>قائمة المتابعة</h2><div class="metricrow"><span>Bitcoin (BTC)</span><span>للمراقبة فقط</span></div><div class="metricrow"><span>Ethereum (ETH)</span><span>للمراقبة فقط</span></div><div class="metricrow"><span>Solana (SOL)</span><span>للمراقبة فقط</span></div><p class="muted">يمكن تطوير هذه الصفحة لاحقاً لإضافة ملاحظات المستخدم، أهداف التعلم، ومقارنة تاريخية موثوقة.</p></div>
+</section>
+<section id="web3" class="page panelhidden">
+<h1>اللامركزية و Web3</h1><p class="muted">اللامركزية ليست مجرد تصميم أو زر ربط محفظة؛ تحتاج عقوداً ذكية مدققة، وآلية حوكمة واضحة، وأماناً واختبارات مستقلة.</p>
+<div class="card"><h2>تصور معماري آمن</h2>
+<div class="metricrow"><span>واجهة المستخدم</span><b class="green">TREE Web App</b></div>
+<div class="metricrow"><span>بيانات السوق</span><b>مصدر موثوق مستقل</b></div>
+<div class="metricrow"><span>العقود الذكية</span><b>غير منشورة — مرحلة تصميم</b></div>
+<div class="metricrow"><span>ربط المحافظ / الإيداع</span><b>غير مفعّل</b></div>
+<div class="metricrow"><span>التدقيق الأمني</span><b>مطلوب قبل أي إطلاق</b></div>
+<p class="muted">قبل أي إطلاق عام، يجب إجراء مراجعة قانونية وأمنية مستقلة وشرح الرسوم والمخاطر بوضوح. لا تضع أموال المستخدمين في عقد غير مدقق.</p></div>
+</section>
+<footer>© TREE — نموذج واجهة تعليمي ومحاكاة محلية، لا يقدم خدمات مالية</footer>
+</main></div>
+<script>
+const prices={BTC:60000,ETH:3000,SOL:140};let cash=10000,holdings={BTC:0,ETH:0,SOL:0},logs=[];
+const money=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+function refresh(){document.getElementById('balance').textContent=money(cash);let v=0,c=0;for(let k in holdings){v+=holdings[k]*prices[k];if(holdings[k]>0)c++;}document.getElementById('portfolio').textContent=money(v);document.getElementById('assetsCount').textContent=c;}
+function simulate(){let a=document.getElementById('asset').value,s=document.getElementById('side').value,n=Number(document.getElementById('amount').value),msg=document.getElementById('tradeMsg');if(!Number.isFinite(n)||n<=0||n>10000){msg.textContent='أدخل مبلغاً افتراضياً بين 1 و10,000 دولار.';return;}let units=n/prices[a];if(s==='buy'){if(n>cash){msg.textContent='الرصيد الافتراضي غير كافٍ.';return;}cash-=n;holdings[a]+=units;}else{if(units>holdings[a]){msg.textContent='لا تملك هذه الكمية في المحفظة الافتراضية.';return;}holdings[a]-=units;cash+=n;}logs.unshift((s==='buy'?'شراء افتراضي ':'بيع افتراضي ')+a+' — '+money(n));document.getElementById('trades').innerHTML=logs.map(x=>'<div class="metricrow">'+x+'</div>').join('');msg.textContent='تم تسجيل عملية محاكاة محلية فقط.';refresh();}
+document.querySelectorAll('.navbtn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.navbtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.page').forEach(p=>p.classList.add('panelhidden'));document.getElementById(b.dataset.page).classList.remove('panelhidden');}));
+</script></body></html>
